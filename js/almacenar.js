@@ -7,12 +7,14 @@ let contenedor = document.getElementById('contenedor');
 
 function actualizar (){
     contenedor.innerHTML= '';
+    inputItem.value = '';
     listado.forEach((elemento)=>{
         let li_ = document.createElement('li');
         li_.textContent = elemento;
         contenedor.appendChild(li_);
     })
 }
+
 document.addEventListener('DOMContentLoaded', function(){
     if(localStorage.getItem("listado")){
         listado = localStorage.getItem("listado")
