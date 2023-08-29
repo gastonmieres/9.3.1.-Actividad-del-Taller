@@ -2,7 +2,6 @@ let listado = [];
 const inputItem = document.getElementById('item');
 const submitButton = document.getElementById('agregar');
 const clearButton = document.getElementById('limpiar');
-const form = document.getElementById('form');
 let contenedor = document.getElementById('contenedor');
 
 function actualizar (){
@@ -34,8 +33,8 @@ submitButton.addEventListener('click', function(e){
         localStorage.setItem("listado", JSON.stringify(listado));
     }
     actualizar();
-    form.reset();
 });
+
 clearButton.addEventListener('click', function(e){
     e.preventDefault();
     localStorage.setItem("listado", JSON.stringify([]));
